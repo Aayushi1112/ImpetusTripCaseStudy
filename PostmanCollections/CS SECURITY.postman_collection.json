@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "14ad2b0e-fef0-4522-8988-861da7073ce7",
+		"name": "CS SECURITY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23356292"
+	},
+	"item": [
+		{
+			"name": "1.Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aayushi\",\r\n    \"email\":\"Aayushi\",\r\n    \"password\":\"Aayushi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.Get token for a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Aayus\",\r\n    \"password\":\"Aayus\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/auth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.Validate a token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGeyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYXl1c2gxMTEyMSIsImlhdCI6MTY5MzkxMTQxNywiZXhwIjoxNjkzOTEzMjE3fQ.SjPUDJNFs_zo8OlOXdE6IJI4s1yL2fA4dtO6Ye2NwlYciOiJIUzI1NiJ9.eyJzdWIiOiJBYXl1c2gxMTEyMSIsImlhdCI6MTY5MzkxMTQxNywiZXhwIjoxNjkzOTEzMjE3fQ.SjPUDJNFs_zo8OlOXdE6IJI4s1yL2fA4dtO6Ye2NwlY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYXl1c2gxMTEyMSIsImlhdCI6MTY5MzkxMTQxNywiZXhwIjoxNjkzOTEzMjE3fQ.SjPUDJNFs_zo8OlOXdE6IJI4s1yL2fA4dtO6Ye2NwlY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9898/auth/validate?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYXl1c2gxMTEyMSIsImlhdCI6MTY5MzkxMTQxNywiZXhwIjoxNjkzOTEzMjE3fQ.SjPUDJNFs_zo8OlOXdE6IJI4s1yL2fA4dtO6Ye2NwlY",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"auth",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYXl1c2gxMTEyMSIsImlhdCI6MTY5MzkxMTQxNywiZXhwIjoxNjkzOTEzMjE3fQ.SjPUDJNFs_zo8OlOXdE6IJI4s1yL2fA4dtO6Ye2NwlY"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "ad823970-9422-40fd-afe8-5988cf5ac724",
+		"name": "CS CAR BOOKING SERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23356292"
+	},
+	"item": [
+		{
+			"name": "1.WELCOME TO CAR",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "2.GET CAR INFO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/cars/get-car-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"cars",
+						"get-car-info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

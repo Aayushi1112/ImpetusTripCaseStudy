@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "3fff3c02-17ca-481b-ba18-6609a12f97a8",
+		"name": "CS FLIGHT BOOKING SERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23356292"
+	},
+	"item": [
+		{
+			"name": "1.WELCOME TO FLIGHT",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "2.GET FLIGHT INFO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/flights/get-flight-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"flights",
+						"get-flight-info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "6cfe35ac-5107-4faa-96e2-d9f0ec9a2594",
+		"name": "CS API GATEWAY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23356292"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "1.Register a new user ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aayushi\",\r\n    \"email\":\"Aayushi.bansal@impetus.com\",\r\n    \"password\":\"Aayushi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.Get token for a saved user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Aayushi\",\r\n    \"password\":\"Aayushi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/auth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.Validate a token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/auth/validate?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYXl1c2hpIiwiaWF0IjoxNjkxMTQ2MDUxLCJleHAiOjE2OTExNDc4NTF9.OnC0ruCb26XzBRJ0xUqPSVg7oVeUxjaadEQZTe-LE54",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYXl1c2hpIiwiaWF0IjoxNjkxMTQ2MDUxLCJleHAiOjE2OTExNDc4NTF9.OnC0ruCb26XzBRJ0xUqPSVg7oVeUxjaadEQZTe-LE54"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.HOtel Sevice with token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYXl1c2hpIiwiaWF0IjoxNjkxMTQ2MDUxLCJleHAiOjE2OTExNDc4NTF9.OnC0ruCb26XzBRJ0xUqPSVg7oVeUxjaadEQZTe-LE54",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/hotels/welcome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"hotels",
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

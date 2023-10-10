@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "645a08b4-9525-445e-a823-e50318cccbc2",
+		"name": "CS HOTEL BOOKING SERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23356292"
+	},
+	"item": [
+		{
+			"name": "1.WELCOME TO HOTEL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/hotel/welcome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"hotel",
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.GET HOTEL INFO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/hotel/get-hotel-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"hotel",
+						"get-hotel-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.ADD HOTEL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"hotelName\":\"TAJ HOTEL\",\r\n\"hotelperBedPrice\":\"2000\",\r\n\"noOfBedsAvailableInHotel\":\"100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/hotel/add-hotel-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"hotel",
+						"add-hotel-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.BOOK A HOTEL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"tripBookingId\":\"1\",\r\n\"tripFrom\":\"Paris\",\r\n\"tripTo\":\"Italy\",\r\n\"noOfhotelBeds\":\"10000\",\r\n\"noOfcarSeats\":\"2\",\r\n\"noOfflightSeats\":\"2\",\r\n\"bookingStatus\":\"TRIP_CREATED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/hotel/book-a-hotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"hotel",
+						"book-a-hotel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

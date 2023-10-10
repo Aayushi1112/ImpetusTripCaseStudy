@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "57b08600-c219-43c2-8a02-c9d842584889",
+		"name": "CS  TRIP BOOKING SERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23356292"
+	},
+	"item": [
+		{
+			"name": "1.WELCOME TO MAKE MY TRIP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/trip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.GET \"MAKE-MY-TRIP\" CATALOG",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/trips/trip-catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						"trip-catalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.ADD TO TRIP CATALOG",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TourFrom\":\"India\",\r\n    \"TourTo\":\"Hong Kong\",\r\n    \"noOfDays\":\"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/trip/add-trip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trip",
+						"add-trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.HOTELS OFFERED ON TRIP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/trips/trip-hotel-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"trips",
+						"trip-hotel-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.CARS OFFERED IN TRIP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/trips/trip-car-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"trips",
+						"trip-car-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.FLIGHTS OFFERED ON TRIP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/trips/trip-flight-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"trips",
+						"trip-flight-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.BOOK A TRIP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tripFrom\":\"India\",\r\n\"tripTo\":\"Paris\",\r\n\"noOfhotelBeds\":\"100\",\r\n \"noOfcarSeats\":\"1\",\r\n\"noOfflightSeats\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/trips/book-trip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"trips",
+						"book-trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.CHECK MY TRIP STATUS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/trips/check-trip-status/1053",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"trips",
+						"check-trip-status",
+						"1053"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
